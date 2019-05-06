@@ -13,14 +13,12 @@ export class PostsService {
 
   constructor() {
     firebase.initializeApp(FIREBASE_CONFIG);
-
     this.db = firebase.firestore();
   }
 
   async getPosts() {
     const postsCollection = this.db.collection(POST_COLLECTION_NAME);
     const querySnapshot = await postsCollection.get();
-
     const posts = [];
     querySnapshot.forEach(doc => {
       posts.push({
@@ -28,7 +26,6 @@ export class PostsService {
         ...doc.data()
       });
     });
-
     return posts;
   }
 }
