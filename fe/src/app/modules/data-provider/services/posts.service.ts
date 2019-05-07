@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase/app';
-import 'firebase/firestore';
-import FIREBASE_CONFIG from '../../../../firebase.config';
 import { POST_COLLECTION_NAME } from '../constatns/constants';
+import firebase from '../firebase.instance';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +10,6 @@ export class PostsService {
   db: firebase.firestore.Firestore;
 
   constructor() {
-    firebase.initializeApp(FIREBASE_CONFIG);
     this.db = firebase.firestore();
   }
 
