@@ -7,11 +7,11 @@ import { PostsService } from '../modules/data-provider/services/posts.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+
   posts = [];
 
   constructor(private postsService: PostsService,
   ) {
-
   }
 
   ngOnInit(): void {
@@ -20,5 +20,4 @@ export class Tab1Page implements OnInit {
         this.posts = posts;
       });
   }
-
 }
