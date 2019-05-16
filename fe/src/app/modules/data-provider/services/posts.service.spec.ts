@@ -9,4 +9,9 @@ describe('PostsService', () => {
     const service: PostsService = TestBed.get(PostsService);
     expect(service).toBeTruthy();
   });
+
+  it('should firebase instance created', () => {
+    const service: PostsService = TestBed.get(PostsService);
+    expect(service.db).toBeTruthy();
+  });
 });
