@@ -4,7 +4,7 @@
   <!--</ion-list-header>-->
   <ion-item *ngFor="let post of posts" [routerLink]="['/post-details/', post.id]" routerDirection="forward">
     <ion-card>
-      <ion-img *ngIf="post.image" [src]="post.image"></ion-img>
+      <!--<ion-img *ngIf="post.image" [src]="post.image"></ion-img>-->
       <ion-card-header>
         <ion-card-subtitle>data</ion-card-subtitle>
         <ion-card-title>{{post.title}}</ion-card-title>

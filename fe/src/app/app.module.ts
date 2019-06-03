@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './store/reducers';
 import { AppEffects } from './store/app.effects';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { AppEffects } from './store/app.effects';
     EffectsModule.forRoot([AppEffects]),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
   ],
   providers: [
     StatusBar,
