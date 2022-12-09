@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^5.4.0",
-    "@nestjs/core": "^5.4.0",
+    "@nestjs/core": "^9.2.1",
     "cheerio": "^1.0.0-rc.3",
     "firebase": "^5.11.1",
     "md5": "^2.2.1",
